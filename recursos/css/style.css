@@ -1,0 +1,215 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&family=Open+Sans:wght@300&family=Wallpoet&display=swap');
+
+:root {
+    --font-wallpoet: 'Wallpoet', cursive;
+    --font-gruppo: 'Gruppo', cursive;
+    --font-opensans: 'Open Sans', sans-serif;
+
+    --branco: #EFEFEF;
+    --preto: #141414;
+    --vermelho: #E50914;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+/* Elementos Base */
+
+body {
+    background: var(--preto) url('../img/kimetsu-no-yaiba-fundo.jpg') top center no-repeat fixed;
+    background-size: cover;
+    background-color: var(--preto);
+    color: var(--branco);
+    font-family: var(--font-opensans);
+}
+
+header {    
+    background-image: linear-gradient(180deg, rgb(0,0,0), rgba(0,0,0,0));
+}
+
+header div.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header div a.logo {
+    color: var(--vermelho);
+    font-family: var(--font-wallpoet);
+    font-size: 45px;    
+    margin-left: 10px;
+    opacity: 90%;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+/* Configuta as letras "ot" do logo */
+
+span.logo {
+    color: var(--branco);
+    font-family: var(--font-gruppo);
+    font-size: 45px;
+    text-decoration: line-through 3px var(--vermelho); 
+}
+
+header a.logo:hover {
+    opacity: 100%;  
+}
+
+/* Elementos de navbar */
+
+header nav a {
+    color: var(--branco);
+    font-family: var(--font-gruppo);
+    font-size: 18px;
+    padding: 10px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+header nav a:last-child {
+    margin-right: 10px;
+}
+
+header nav a:hover {
+    background-color: #e509147a;    
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+    transition: .5s ease all;
+}
+
+/* título principal */
+
+.filme-principal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 500px;  
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+.filme-principal .container {
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.1));
+    margin-top: 15%;
+    border-radius: 15px;
+    width: 50%;
+}
+
+.filme-principal .titulo-principal {    
+    margin-top: 15px;
+    font-size: 30px;
+    text-align: center;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+.filme-principal .sinopse {
+    font-size: 16px;
+    margin-top: 10px;
+    padding-left: 10px;
+}
+
+.filme-principal .botoes {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 30px 30px;
+}
+
+.botoes .botao {
+    background-color: rgba(0,0,0,0.5);
+    border: none;
+    border-radius: 2px;
+    color: var(--branco);
+    cursor: pointer;
+    padding: 15px 50px;
+    letter-spacing: 2px;
+    transition: .5s ease all;
+}
+
+.botoes .botao:hover {
+    background-color: #e509147a;    
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+.botao i.fa-solid {
+    margin-right: 8px;
+}
+
+.container {
+    margin-inline: 20px;
+}
+
+/* Carrosel */
+
+div.carousel-animes {
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur;
+    padding: 15px;
+}
+
+div.item {
+    overflow: hidden;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+img.box-anime{
+    display: block;
+    width: 250px;
+    height: 350px;
+    -webkit-transition: -webkit-transform .5s ease;
+}
+
+img.box-anime:hover {
+    -webkit-transform: scale(1.1);
+}
+
+@media  (max-width: 1200px) {
+    .filme-principal .container {
+        width: 60%;
+    }
+}
+
+@media (max-width: 800px) {
+    .filme-principal .container {
+        width: 80%;
+        margin: auto;
+    }
+    header .container {
+        display: flex;
+        flex-direction: column;
+        margin: 5px;
+    }
+    nav {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        display: flex;
+    }
+    nav {
+        display: none;
+    }
+    body {
+        width: 100%;
+    }
+    .filme-principal .container {
+        width: 90%;
+        margin: auto;
+    }
+    .filme-principal .botoes {
+        flex-direction: column;
+    }
+    button.botao {
+        height: 50px;
+        margin-top: 20px;
+    }
+}
