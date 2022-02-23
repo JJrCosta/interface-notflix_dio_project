@@ -25,7 +25,7 @@
 /* Elementos Base */
 
 body {
-    background: var(--preto) url('../img/kimetsu-no-yaiba-fundo.jpg') top center no-repeat fixed;
+    background: var(--preto) url('../img/fundo.jpg') top center no-repeat fixed;
     background-size: cover;
     background-color: var(--preto);
     color: var(--branco);
